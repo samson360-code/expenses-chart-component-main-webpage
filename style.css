@@ -1,0 +1,126 @@
+:root {
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+   --hober: hsl(186, 100%, 79%);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 0.5rem;
+    height: 100vh;
+    background-color: var(--Cream);
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Soft-red);
+    color: var(--Very-pale-orange);
+    border-radius: 1rem;
+    margin-block: 2rem;
+}
+
+header>h3 {
+    color: var(--Cream);
+}
+
+p,
+h4 {
+    color: var(--Medium-brown);
+}
+
+section {
+    margin-block: 2rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: var(--Very-pale-orange);
+}
+
+h4,
+h3,
+h2,
+h1,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.expenses {
+    gap: 0.2rem;
+    display: flex;
+}
+
+.expenses>* {
+    padding-inline: 0.2rem;
+    flex: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    height: 10rem;
+    display: flex;
+    /* align-items: end; */
+    justify-content: end;
+    flex-direction: column;
+    margin-block:2rem ;
+}
+
+.spend {
+    position: relative;
+    background-color: var(--Soft-red);
+    width: 100%;
+    border-radius: 0.2rem;
+}
+
+.spend:hover {
+    background-color: hsl(0, 100%, 70%);;
+}
+hr{
+    background-color: var(--Medium-brown);
+    margin-block: 1rem;
+}
+.total>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.from {
+    text-align: right;
+}
+
+.from>h4:first-child {
+    color: black;
+}
+
+.price {
+    background-color: var(--Dark-brown);
+    color: var(--Very-pale-orange);
+    padding: 0.3rem;
+    text-align: center;
+    position: absolute;
+    top: -2rem;
+    right: -0.5rem;
+    left: -0.5rem;
+    font-size: 0.5rem;
+    border-radius: 0.2rem;
+    display: none;
+}
+.spend:hover>.price {
+    display: block;
+}
+@media (min-width:700px) {
+    section{
+        width:30rem
+    }
+    .price{
+        font-size: 1rem;
+
+    }
+}
